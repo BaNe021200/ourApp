@@ -1,0 +1,71 @@
+{% extends "base.html.twig" %}
+
+{% block stylesheet %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('zoombox/zoombox.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/images.css') }}">
+{% endblock stylesheet %}
+{% block downloadButton %}Download{% endblock downloadButton %}
+
+
+
+{% block test %}
+
+{% endblock test %}
+
+
+{% block navHomeActive %}active{% endblock %}
+
+{% block downloadButtonLink %}
+    {{ path('parisDownload') }}
+{% endblock %}
+
+
+{% block pageHeading %}Séverine & moi{% endblock pageHeading %}
+
+{% block secondarytxt %}Paris{% endblock secondarytxt %}
+
+
+
+{% block navHome %}Paris{% endblock navHome %}
+
+{% block navHomeLink %}{{ path('Paris') }}{% endblock navHomeLink %}
+
+{% block navAbout %}Sigale{% endblock navAbout %}
+
+{% block navAboutLink %}{{ path('Sigale') }}{% endblock navAboutLink %}
+
+{% block navServices %}Besse{% endblock navServices %}
+
+{% block navServicesLink %}{{ path('Besse') }}{% endblock navServicesLink %}
+
+{% block navContact %}{% endblock navContact %}
+
+{% block src %}src="img/coverParis.jpg"{% endblock src %}
+
+
+
+
+
+{% block thumbnails %}
+
+    {% for thumb in thumbs %}
+
+        <div  class="col-md-3 col-sm-6 mb-4 img-thumbnail thumbs" >
+
+            <a href="img/{% block ville %}Paris{% endblock ville %}/{{ thumb.basename }}" rel="zoombox[{% block zoomboxVille %}Paris{% endblock zoomboxVille %}]">
+                <img id="thumb" class="img-fluid " src="{{ thumb.dirname }}/{{ thumb.basename }}" alt="">
+            </a>
+
+        </div>
+{% endfor %}
+{% endblock thumbnails %}
+
+
+
+{% block javaScript %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset('zoombox/jquery.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('zoombox/zoombox.js') }}"></script>
+
+{% endblock javaScript %}

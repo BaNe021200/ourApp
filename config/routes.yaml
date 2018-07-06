@@ -1,0 +1,46 @@
+/:
+    path: /
+    controller: App\Controller\ImagesController::Paris
+
+Paris:
+    path: /Paris
+    controller: App\Controller\ImagesController::Paris
+
+Sigale:
+    path: /Sigale
+    controller: App\Controller\ImagesController::Sigale
+
+Besse:
+    path: /Besse
+    controller: App\Controller\ImagesController::Besse
+
+
+
+besseDownload:
+    path: /Besse/download
+    controller: App\Controller\DownloadController::downloadBesse
+
+besseUpload:
+    path: /Besse/upload
+    controller: App\Controller\DownloadController::uploadBesse
+    methods: [POST]
+
+sigaleDownload:
+    path: /Sigale/download
+    controller: App\Controller\DownloadController::downloadSigale
+
+sigaleUpload:
+    path: /Sigale/upload
+    controller: App\Controller\DownloadController::uploadSigale
+    methods: [POST]
+
+parisDownload:
+    path: /Paris/download
+    controller: App\Controller\DownloadController::downloadParis
+
+parisUpload:
+    path: /Paris/upload
+    controller: App\Controller\DownloadController::uploadParis
+    methods: [POST]
+
+

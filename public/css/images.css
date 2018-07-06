@@ -1,0 +1,8 @@
+.thumbs{
+    margin-right: -12rem !important;
+}
+
+.rowThumbs{
+    flex-wrap: nowrap !important;
+    overflow: auto;
+}
